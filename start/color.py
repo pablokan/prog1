@@ -1,10 +1,10 @@
 colorCompu = 'rojo'
-color = input('Elija un color: ')
+color = input('Adivine el color: ')
 
 if color == colorCompu:
-    print('Acertó')
+    print('Acertó!')
 else:
-    print('No es', colorCompu)
+    print('Falló. La computadora eligió:', colorCompu)
 
 
 
