@@ -20,9 +20,9 @@ rsr = [[datetime.date(2021, 1, 1), 1, 30],
           [datetime.date(2021, 1, 3), 2, 0]
 ]
 
-df = pd.DataFrame(rsr, columns=['fecha', 'sustrato', 'cantidad'])
+df = pd.DataFrame(rsr, columns=['fecha', 'item', 'cantidad'])
 print(df)
-df = df.loc[df['sustrato'] == 1]
-df = df.groupby(['fecha', 'sustrato']).sum()
+df = df.loc[df['item'] == 1]
+df = df.groupby(['fecha', 'item']).sum()
 print(df)
 print(df['cantidad'].to_list())
