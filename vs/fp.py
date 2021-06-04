@@ -13,6 +13,8 @@ print(list(result))
 first_it = [2, 3]
 second_it = [4, 2, 6, 7]
 
+print(list(map(lambda x: x*2, first_it)))
+
 print(list(map(pow, first_it, second_it)))
 
 print(list(map(lambda x,y: x-y, first_it, second_it)))

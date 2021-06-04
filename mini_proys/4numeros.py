@@ -1,4 +1,5 @@
 from random import randint
+
 c = 0
 n = []
 while c < 4:
@@ -11,7 +12,7 @@ win = False
 while not win:
     bien = 0
     regular = 0
-    a = input('Número: ')
+    a = input("Número: ")
     for x in range(4):
         for y in range(4):
             if a[x] == n[y]:
@@ -25,7 +26,4 @@ while not win:
         print(bien, "bien y", regular, "regular")
 
 if win:
-    print('Acertó!', n)
-    
-
-
+    print("Acertó!", n)
