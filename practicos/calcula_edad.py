@@ -13,7 +13,4 @@ def edad(fn):
         e -= 1
     return e
 
-if __name__ == '__main__':
-    print(edad('03-06-1965'))
-
 

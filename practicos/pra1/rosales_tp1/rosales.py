@@ -1,14 +1,21 @@
 name = ["Ana Torres","Kate Hudson","Benicio Quesada","Susana Campoamores","Carlos Santamaria","Azul Skarsgard","Walter Catalejos"]
 eliminar = ["na","ate","enicio","usana","arlos","zul","alter"]
-a = (name[0].split(eliminar[0]))
-b = (name[1].split(eliminar[1]))
-c = (name[2].split(eliminar[2])) 
-d = (name[3].split(eliminar[3])) 
-e = (name[4].split(eliminar[4])) 
-f = (name[5].split(eliminar[5])) 
-g = (name[6].split(eliminar[6]))
-t = ['  ']
-nyi = a + t + b + t + c + t + d + t + e + t + f + t + g 
+# a = (name[0].split(eliminar[0]))
+# b = (name[1].split(eliminar[1]))
+# c = (name[2].split(eliminar[2])) 
+# d = (name[3].split(eliminar[3])) 
+# e = (name[4].split(eliminar[4])) 
+# f = (name[5].split(eliminar[5])) 
+# g = (name[6].split(eliminar[6]))
+
+nyi = []
+for i in range(len(name)):
+    nyi += name[i].split(eliminar[i]) + ['  ']
+
+# t = ['  ']
+# nyi = a + t + b + t + c + t + d + t + e + t + f + t + g 
+print(nyi)
+
 fi = ''
 for e in range (len(nyi)):
     if nyi[e] != '""':

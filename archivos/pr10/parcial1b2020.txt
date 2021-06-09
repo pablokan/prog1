@@ -1,0 +1,5 @@
+Led Zeppelin,9,1234567,Jimmy Page-Robert Plant(voz)-John Bonham-John Paul Jones,banda
+Peter Gabriel,10,70,solista
+Rage Against the Machine,4,2434908,Zack de la Rocha(voz)-Tom Morello-Tim Commerford-Brad Wilk,banda
+Jeff Beck,3,76,solista
+Seru Giran,5,324192,Pedro Aznar-Oscar Moro-David Lebón(voz)-Charly García(voz),banda
