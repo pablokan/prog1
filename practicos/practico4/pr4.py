@@ -1,0 +1,5 @@
+f = open('deudores.txt', 'r')
+f.seek(1062)
+todo = f.read(1)
+print(todo)
+f.close()
