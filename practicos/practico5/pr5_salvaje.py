@@ -11,6 +11,8 @@ for linea in lineas:
         actor = linea[19: linea.find(',')]
     if 'Value' in linea and linea[-3] == '%':
         rotten = linea[-5:-3]
+        if rotten[0] == '"':
+            rotten = rotten[1]
     caja = ''
     if 'BoxOffice' in linea:
         for caracter in linea:

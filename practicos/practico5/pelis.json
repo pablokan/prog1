@@ -61,7 +61,7 @@
             },
             {
                 "Source": "Rotten Tomatoes",
-                "Value": "19%"
+                "Value": "9%"
             },
             {
                 "Source": "Metacritic",
@@ -79,7 +79,7 @@
         "Website": "N/A",
         "Response": "True"
     },
-    {
+        {
         "Title": "Serenity",
         "Year": "2005",
         "Rated": "PG-13",
