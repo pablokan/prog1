@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 @dataclass
-class Deportista:
+class Sportsman:
     nombre: str
     altura: float
     peso: float
@@ -10,7 +10,7 @@ class Deportista:
         return f'{self.nombre}: {self.altura}m. de alto, {self.peso} kg. de peso'
 
 
-deportista1 = Deportista('Elena', 1.81, 64)
+deportista1 = Sportsman('Elena', 1.81, 64)
 print(deportista1, type(deportista1))  
 
 atleta = str(deportista1)  
