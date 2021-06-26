@@ -42,7 +42,6 @@ def peliXletra(letra):
             print(salida)
 
 def menu():
-    os.system('clear')
     op = ''
     while op != '4':
         print('Menú de Opciones')
