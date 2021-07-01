@@ -5,9 +5,7 @@ t.pop(0)
 
 def verano(fecha): # formato aaaa-mm-dd
     retorno = 0
-    anio = int(fecha[:4])
-    mes = int(fecha[5:7])
-    dia = int(fecha[8:])
+    anio, mes, dia = list(map(int, fecha.split('-')))
     if mes == 12 and dia >= 21:
         retorno = anio + 1
     elif (1 <= mes <= 2) or (mes == 3 and dia <=20):
@@ -17,7 +15,7 @@ def verano(fecha): # formato aaaa-mm-dd
     return retorno
  
 c = 0 
-a = 1983
+a = 1985
 for l in t:
     p = l.split()[0]
     nombre = p[:p.find(',')]
