@@ -1,4 +1,4 @@
-from valids import iI
+from input_int import inputInt
 
 def menu(**ops):
     print('\n----------------------')
@@ -11,7 +11,7 @@ def menu(**ops):
             print(i, ')', v[1])
             d[i] = v[0]
         print(cantItems, ') Salir del Programa')
-        op = iI('Opción: ', min=1, max=cantItems)
+        op = inputInt('Opción: ', min=1, max=cantItems)
         if op != cantItems:
             eval(d[op]+'()')
 

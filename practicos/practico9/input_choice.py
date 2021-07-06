@@ -1,13 +1,14 @@
 def inputChoice(listaOpc, mensaje='Elija una opción'):
-    listaOpc = listaOpc.split('//')
-    concOp = ' '
-    for op in listaOpc:
-        concOp += op
-        mensaje = mensaje + ' => ' + concOp
-    print(mensaje)
-    a = input()
-    return a
+    mensaje = mensaje + ' (' + listaOpc + '): '
+    listaOpc = listaOpc.split('/')
+    op = ''
+    while op not in listaOpc:
+        op = input(mensaje)
+    return op
 
 if __name__=='__main__':
-    q = inputChoice('si//no//no sé')
+    q = inputChoice('si/no/a veces')
     print(q)
+    r = inputChoice('rojo/verde', 'Elija un color')
+    print(r)
+    
