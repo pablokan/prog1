@@ -15,20 +15,31 @@ def menu(**ops):
         if op != cantItems:
             eval(d[op]+'()')
 
-def stop():
-    input('Enter para volver al menú')
+if __name__ == '__main__':
+    def stop():
+        input('Enter para volver al menú')
 
-def createUser():
-    print('función createUser')
-    stop()
+    def createUser():
+        print('función createUser')
+        stop()
 
-def delUser():
-    print('función delUser')
-    stop()
+    def delUser():
+        print('función delUser')
+        stop()
 
-def listUsers():
-    print('función listUsers')
-    stop()
+    def listUsers():
+        print('función listUsers')
+        stop()
 
-menu(createUser='Crear usuario!', delUser='Borrar usuario', listUsers='Listar usuarios')
+    menu(createUser='Crear usuario!', delUser='Borrar usuario', listUsers='Listar usuarios')
+
+    def foo():
+        print('foo')
+        stop()
+    def bar():
+        print('bar')
+        stop()
+    menu(foo='Primera Opción', bar='Segunda Opción')
+
+
 
