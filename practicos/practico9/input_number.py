@@ -1,7 +1,16 @@
 import sys
-
-def inputNumber(dataType, mensaje, min=-sys.maxsize, max=sys.maxsize):
-    numero = 0
+infinite = 1e309  # actual python infinite
+def inputNumber(dataType, mensaje, min=-infinite, max=infinite):
+    sufijoMensaje = ''
+    tipoNum = {int: 'entero', float: 'real'}
+    if min != -infinite and max != infinite:
+        sufijoMensaje = f'(entre {min} y {max})'
+    elif min != -infinite:
+        sufijoMensaje = f'(mayor a {min-1})'
+    elif max != infinite:
+        sufijoMensaje = f'(menor a {max+1})'
+    mensaje = f'{mensaje} {sufijoMensaje}: '
+    numero = ''
     validado = False
     while not validado:
         numero = input(mensaje)
@@ -10,24 +19,19 @@ def inputNumber(dataType, mensaje, min=-sys.maxsize, max=sys.maxsize):
             if min <= numero <= max:
                 validado = True
             else:
-                if min != -sys.maxsize and max != sys.maxsize:
-                    print('El rango de valores es entre', min, 'y', max)
-                elif min != -sys.maxsize:
-                    print('Debe ser mayor que', min-1)
-                elif max != sys.maxsize:
-                    print('Debe ser menor que', max+1)
+                print('valor fuera de rango')
                 
         except:
-            print("Error. Debe ingresar un número entero")
+            print(f"Error. Debe ingresar un número {tipoNum[dataType]}")
     return numero
 
 
 if __name__ == '__main__':
-    i = inputNumber(int, 'Ingrese un entero entre 3 y 7: ', 3, 7)
+    i = inputNumber(int, 'Ingrese una edad', 13, 17)
     print(type(i))
-    r = inputNumber(float, 'Ingrese un real entre 3 y 7: ', 3, 7)
+    r = inputNumber(float, 'Ingrese una altura', 1.55, 1.75)
     print(r, type(r))
-    # m = inputNumber('Cualquier entero: ')
-    # maxito = inputNumber('ingrese un entero menor a 1000: ', max=999)
-    # minito = inputNumber('ingrese un entero mayor a 1000: ', min=1001)
-    minito = inputNumber(float, 'ingrese un real mayor a 1000: ', min=1001)
+    m = inputNumber(int, 'Cualquier entero')
+    maxito = inputNumber(int, 'ingrese un entero bajo', max=999)
+    minito = inputNumber(float, 'ingrese un real alto', min=1001)
+
