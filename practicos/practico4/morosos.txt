@@ -1,4 +1,4 @@
-nombre,email,deuda
+nombre, mail, saldo
 Lizbeth,locklin1@tiny.cc,423222
 Micky,mmaccall6@elpais.com,925498
 Kareem,khephero@furl.net,350797

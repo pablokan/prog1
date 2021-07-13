@@ -6,3 +6,5 @@ print(sortedDict)
 valores = {5:200, 3:10000, 4:15000} 
 valores_ord = dict(sorted(valores.items()))
 print(valores_ord)
+
+print(valores.keys())

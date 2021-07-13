@@ -15,16 +15,16 @@ def buildCSVline(*args):
     return line
 
 f = open('pelis.json', 'r')
-a = f.read()
+stringDeJson = f.read()
 f.close()
-d = loads(a)
+listaDeDiccionarios = loads(stringDeJson)
 f = open('pelis.csv', 'w')
 f.write('Nombre,Actor,Rating,Recaudacion\n')
-for e in d:
-    title = e['Title']
-    actor = e['Actors'].split(',')[0]
-    rating = e['Ratings'][1]['Value'][:-1]
-    caja = cleanNumber(e['BoxOffice'])
+for diccionario in listaDeDiccionarios:
+    title = diccionario['Title']
+    actor = diccionario['Actors'].split(',')[0]
+    rating = diccionario['Ratings'][1]['Value'][:-1]
+    caja = cleanNumber(diccionario['BoxOffice'])
     f.write(buildCSVline(title, actor, rating, caja))
 f.close()
 
