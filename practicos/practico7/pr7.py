@@ -12,7 +12,7 @@ for e in d:
         paises[pais] = 1
     else:
         paises[pais] += 1
-
+ 
 paises = dict(sorted(paises.items(), key=lambda x: x[1], reverse=True))
 print('Personas por país')
 for k, v in paises.items():

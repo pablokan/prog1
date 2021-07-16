@@ -10,6 +10,7 @@ while c < 4:
 if n[0] == '0':
     x = randint(1, 3)
     n[0], n[x] = n[x], n[0]
+print(n)
 
 win = False
 intentos = 0
@@ -19,12 +20,11 @@ while not win:
     a = input("Número: ")
     intentos += 1
     for x in range(4):
-        for y in range(4):
-            if a[x] == n[y]:
-                if x == y:
-                    bien += 1
-                else:
-                    regular += 1
+        if a[x] in n:
+            if a[x] == n[x]:
+                bien += 1
+            else:
+                regular += 1
     if bien == 4:
         win = True
     else:

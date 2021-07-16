@@ -1,4 +1,3 @@
-import sys
 infinite = 1e309  # actual python infinite
 def inputNumber(dataType, mensaje, min=-infinite, max=infinite):
     sufijoMensaje = ''
