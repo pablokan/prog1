@@ -1,0 +1,4 @@
+Tarea,Categoría,Urgente,Fecha
+Ir al Super,Personal,False,None
+Pagar la luz,Personal,False,2021-08-05
+Corregir parcial,Laboral,True,2021-08-12
