@@ -1,0 +1,13 @@
+Logica y Matematica,Examen,2021/08/17
+Programacion I,Examen,2021/08/17
+Sistemas y Organizaciones,Examen,2021/08/17
+Arquitectura de las computadoras,Examen,2021/08/17
+Prueba 5,Examen,2021/08/11
+Proyecto Cabanias,Tarea,2021/08/12
+Proyecto Lista de Tareas,Tarea,2021/08/11
+Dolibarr,Tarea,2021/08/16
+Funciones recursivas,Tarea,2021/08/10
+Pagar luz,Pagos,2021/08/10
+Comprar cuadernillos,Compras,2021/10/26
+Ecogas,Pago,2021/08/12
+Comprar paniales,Compras,2021/08/10

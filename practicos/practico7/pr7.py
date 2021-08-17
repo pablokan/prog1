@@ -8,10 +8,7 @@ d = loads(a)
 paises = {}
 for e in d:
     pais = e['location']['country']
-    if pais not in paises.keys():
-        paises[pais] = 1
-    else:
-        paises[pais] += 1
+    paises[pais] = 1 if pais not in paises else paises[pais] + 1
  
 paises = dict(sorted(paises.items(), key=lambda x: x[1], reverse=True))
 print('Personas por país')
