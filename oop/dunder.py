@@ -1,0 +1,11 @@
+class Foo:
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return f"el pibe se llama {self.name} a secas"
+
+
+f = Foo("Bob")
+
+print(f)
