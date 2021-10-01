@@ -8,12 +8,27 @@ class Jugador():
     def recibirCarta(self, carta):
         self.mano.append(carta)
         
-    def verMano(self, dealer_start=True):
-        pass
+    def verMano(self):
+        print(self.mano)
+        vMano = [e[1] for e in self.mano]
 
-    def calcularMano(self):
-        pass
+        for i, e in enumerate(vMano):
+            if e == "J" or e == "Q" or e == "K":
+                vMano[i] = 10
+            elif e == "A":
+                vMano[i] = 1
+        print(vMano)
+        total1 = sum(vMano)
+        total2 = 0
+        cartel = f"Total: {total1}"
+        if vMano.count(1) != 0 and total1 + 10 < 22:
+            total2 = total1 + 10
+            cartel += f" o {total2}"
+        if total1 == 21 or total2 == 21:
+            cartel = "Blackjack!"
+        print(cartel)
 
+    
 class Blackjack():
     def __init__(self):
         palos = ("Pique", "Corazón", "Diamante", "Trébol")
@@ -25,7 +40,8 @@ class Blackjack():
         jugador = Jugador(nombre)
         dealer = Jugador("Dealer")
         jugador.recibirCarta(self.darCarta())
-        jugador
+        jugador.recibirCarta(self.darCarta())
+        jugador.verMano()
 
     def darCarta(self):    
         return self.mazo.pop()
