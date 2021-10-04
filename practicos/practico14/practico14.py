@@ -1,4 +1,4 @@
-class Empleado():
+class Empleado:
     def setName(self, name):
         self.name = name
 
@@ -11,7 +11,6 @@ class Empleado():
     def getSalary(self):
         return self.salary
 
-      
 
 class Programador(Empleado):
     def __init__(self, lang):
@@ -24,7 +23,7 @@ class Programador(Empleado):
         return self.lang, self.project
 
 
-class Empresa():
+class Empresa:
     def __init__(self, nombre, rubro):
         self.listaProyectos = ["Web Pollitos", "Sistema Gallina SRL"]
         self.listaLenguajes = ["Python", "JavaScript", "C#", "HTML & CSS"]
@@ -42,13 +41,13 @@ class Empresa():
             n = input("Nombre: ")
             p.setName(n)
             if lang == "Python":
-                sal = 125000
+                sal = 175000
             else:
-                sal = 75000
+                sal = 115000
             p.setSalary(sal)
             print("Proyecto:", self.listaProyectos)
             op = input("Elija 1 o 2: ")
-            p.setProject(self.listaProyectos[int(op)-1])
+            p.setProject(self.listaProyectos[int(op) - 1])
             self.listaProgramadores.append(p)
         else:
             print("lenguajes pedidos:", self.listaLenguajes)
@@ -61,29 +60,12 @@ class Empresa():
             print(e.getName(), e.getSalary(), "Lenguaje:", l, " Proyecto:", p)
 
 
-class App():
+class App:
     def __init__(self, cE):
         empresa = Empresa("itecLabs", "Desarrollo de Software")
         for i in range(cE):
             empresa.addEmp()
         empresa.mostrarTodo()
 
-app = App(4)    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app = App(4)
