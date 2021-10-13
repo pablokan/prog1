@@ -8,3 +8,5 @@ print(f"{num:{nestedFormat3}}")
 
 now = datetime.now()
 print(f"{now:%Y-%m-%d %H:%M:%S}")
+
+print(f"Debugging ######## {num=} #########")  # pv snippet
